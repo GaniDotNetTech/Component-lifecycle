@@ -52,7 +52,6 @@ class App extends Component {
             this.setState({persons:personlist}); 
       }
       buttonClickHandler =()=>{
-        
         const shwoPerson = this.state.showEmpolyee;
         this.setState({showEmpolyee:!shwoPerson});
         console.log(this.state.showEmpolyee);
@@ -67,7 +66,10 @@ class App extends Component {
     return (
       <div>
       <button onClick = {this.buttonClickHandler}>Click</button>
-        <Hello name={this.state.name} />
+      {this.state.showEmpolyee ?
+        <Hello name={this.state.name} /> : console.log('em')
+        
+      }
         <p>
         {person}
           Start editing to see some magic happen :)
