@@ -10,8 +10,8 @@ class PersonList extends Component{
     console.log('Excuting shouldComponentUdpate in PersonList');
     return true;
   }
-  getShapShotBeforeUpdate(pervProps,prevState){
-   console.log('Excuting getShapShotBeforeUpdate in PersonList')
+  getSnapshotBeforeUpdate(pervProps,prevState){
+   console.log('Excuting getShapShotBeforeUpdate in PersonList');
   }
    
       render(){
