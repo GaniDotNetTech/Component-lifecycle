@@ -12,6 +12,7 @@ class PersonList extends Component{
   }
   getSnapshotBeforeUpdate(pervProps,prevState){
    console.log('Excuting getShapShotBeforeUpdate in PersonList');
+   return true;
   }
    
       render(){
@@ -22,7 +23,7 @@ class PersonList extends Component{
         <Person
         name ={person.name}
           key={person.id}
-          textChangeHandler={event => this.props.textChangeHandler(event, person.id)} 
+          textChangeHandler={this.props.textChangeHandler.bind(this,event, person.id)} 
           deleteClickedHandler = {()=>this.props.deleteClickedHandler(index)}
         />
       );
