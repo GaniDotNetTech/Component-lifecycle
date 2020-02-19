@@ -8,6 +8,12 @@ class PersonList extends Component{
   }
    shouldComponentUpdate(nextProps,nextState){
     console.log('Excuting shouldComponentUdpate in PersonList');
+    // if(nextProps.persons !== this.props.persons){
+    //   return true;
+    // }
+    // else{
+    // return false;
+    // }
     return true;
   }
   getSnapshotBeforeUpdate(pervProps,prevState){
